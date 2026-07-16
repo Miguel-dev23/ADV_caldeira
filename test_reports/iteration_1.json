@@ -1,0 +1,25 @@
+{
+  "summary": "Full backend + frontend testing for Fernanda Caldeira Advocacia landing page. 7/7 pytest backend tests passed (root welcome, POST /api/contact valid+validation, GET /api/contact list w/ persistence and ordering). Frontend Playwright flow: hero heading present, nav visible, all 6 WhatsApp buttons have valid wa.me/5512982654821 hrefs, Google Maps embed present, FAQ accordion expands (aria-expanded=true), nav anchor scroll works (scrollY 2336), contact form success flow (toast 'Mensagem enviada' + form cleared), empty-form validation toast shown, mobile menu open/close works on 390px viewport.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/backend_test.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "server.py stores created_at as ISO string on insert but re-parses to datetime in list response — works, but consider storing as native BSON datetime for proper server-side sort by date type (currently sort works because ISO 8601 UTC strings are lexicographically sortable).",
+    "Contact model uses EmailStr import but ContactLeadCreate.email is a plain str; import is unused and email is not validated. Low priority (email is optional).",
+    "CORS is wide-open ('*') which is fine for a public landing page but consider restricting for production.",
+    "No rate limiting on POST /api/contact — public endpoint could be spam-abused. Consider adding basic throttling.",
+    "GET /api/contact is publicly accessible and returns all leads with PII (name/phone/email/message). This should be admin-only in production."
+  ],
+  "updated_files": ["/app/backend/tests/backend_test.py"],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "test_credentials": "N/A - public site, no auth",
+  "seed_data_creation": "Created a handful of TEST_-prefixed contact leads in MongoDB via API during testing (not cleaned up; harmless as this is fresh dev DB).",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Backend pytest lives at /app/backend/tests/backend_test.py; run via `pytest backend/tests/backend_test.py --junitxml=/app/test_reports/pytest/pytest_results.xml`. Public URL used: REACT_APP_BACKEND_URL from /app/frontend/.env. Contact form submit is instant (~500ms) — no long AI waits. Mobile menu uses framer AnimatePresence so element is removed from DOM on close (assert on count()==0).",
+  "rca of the issue": "No bugs found."
+}

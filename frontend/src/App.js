@@ -1,54 +1,39 @@
-import { useEffect } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import SmoothScroll from "@/components/SmoothScroll";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Hero from "@/components/sections/Hero";
+import Marquee from "@/components/sections/Marquee";
+import About from "@/components/sections/About";
+import Services from "@/components/sections/Services";
+import Gallery from "@/components/sections/Gallery";
+import HoursLocation from "@/components/sections/HoursLocation";
+import Reviews from "@/components/sections/Reviews";
+import Faq from "@/components/sections/Faq";
+import Contact from "@/components/sections/Contact";
+import { Toaster } from "@/components/ui/sonner";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <SmoothScroll>
+        <Nav />
+        <main>
+          <Hero />
+          <Marquee />
+          <About />
+          <Services />
+          <Gallery />
+          <HoursLocation />
+          <Reviews />
+          <Faq />
+          <Contact />
+        </main>
+        <Footer />
+        <FloatingWhatsApp />
+      </SmoothScroll>
+      <Toaster position="top-center" richColors />
     </div>
   );
 }
