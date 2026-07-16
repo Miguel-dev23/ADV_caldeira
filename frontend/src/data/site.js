@@ -31,9 +31,9 @@ export const waLink = (msg) =>
 
 export const IMAGES = {
   heroPortrait:
-    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxmZW1hbGUlMjBsYXd5ZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODQxNjUyNDl8MA&ixlib=rb-4.1.0&q=85&w=1400",
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_legal-excellence-28/artifacts/w6gi2f0l_Screenshot_20260716_183642_Instagram.jpg",
   aboutPortrait:
-    "https://images.unsplash.com/photo-1733348137479-2e726d326d9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjBsYXd5ZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODQxNjUyNDl8MA&ixlib=rb-4.1.0&q=85&w=1200",
+    "https://customer-assets-lxgj4vgw.emergentagent.net/job_legal-excellence-28/artifacts/94ebc7xo_Screenshot_20260716_183652_Instagram.jpg",
   serviceFamily:
     "https://images.unsplash.com/photo-1559234938-b60fff04894d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGVsZGVybHklMjBjb3VwbGUlMjB3YWxraW5nfGVufDB8fHx8MTc4NDE2NTI1OHww&ixlib=rb-4.1.0&q=85&w=1000",
   serviceSuccession:
