@@ -1,0 +1,191 @@
+{
+  "theme": "light",
+  "typography": {
+    "fonts": {
+      "heading": "'Cormorant Garamond', serif",
+      "body": "'Manrope', sans-serif",
+      "import_urls": [
+        "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap",
+        "https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+      ]
+    },
+    "guidelines": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight text-navy leading-none",
+      "h2": "text-4xl sm:text-5xl font-light tracking-tight text-navy leading-tight",
+      "h3": "text-2xl sm:text-3xl font-medium text-navy",
+      "body": "text-base sm:text-lg font-light leading-relaxed text-navy/80",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] text-gold"
+    }
+  },
+  "colors": {
+    "primary_navy": "#0C2D4E",
+    "secondary_gold": "#B8860B",
+    "accent_brass": "#D4B78D",
+    "background_cream": "#F5F1E8",
+    "surface_white": "#FFFFFF",
+    "text_main": "#0C2D4E",
+    "text_muted": "rgba(12, 45, 78, 0.7)"
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "soft": "shadow-[0_8px_30px_rgb(12,45,78,0.04)]",
+      "medium": "shadow-[0_12px_40px_rgb(12,45,78,0.08)]"
+    },
+    "border_radius": {
+      "cards": "rounded-3xl",
+      "buttons": "rounded-full",
+      "images": "rounded-2xl"
+    },
+    "glassmorphism": {
+      "header": "backdrop-blur-xl bg-[#F5F1E8]/80 border-b border-[#0C2D4E]/10"
+    }
+  },
+  "layouts": {
+    "spacing": "py-24 sm:py-32 px-6 sm:px-12 max-w-7xl mx-auto",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12"
+  },
+  "motion": {
+    "libraries": [
+      "framer-motion",
+      "lenis"
+    ],
+    "guidelines": {
+      "hero_reveal": "Masked line-by-line reveal (overflow-hidden wrapper, text slides up from y: 100% to 0).",
+      "scroll_momentum": "Use Lenis for smooth momentum scrolling.",
+      "parallax": "Subtle parallax on hero portrait image on scroll.",
+      "hover_states": "Images scale slightly (scale-105) on hover with a slow transition. Buttons have a slight lift (-translate-y-1) and shadow increase."
+    }
+  },
+  "sections": {
+    "nav": {
+      "description": "Sticky glassmorphism header. Left: 'FC' Logo (Gold on Navy circle). Right: Nav links and 'Agendar' pill button.",
+      "style": "fixed top-0 w-full z-50 glassmorphism"
+    },
+    "hero": {
+      "description": "Kinetic Hero with large bold typography, line-by-line reveal. Real photography of lawyer treated deliberately with spotlight or clipped frames.",
+      "elements": [
+        "Headline: 'Excelência em Direito de Família & Sucessões'",
+        "Subheadline: 'Protegendo o seu legado com discrição, empatia e estratégia.'",
+        "Buttons: WhatsApp, Agendar, Localização",
+        "Image: Female lawyer portrait with subtle parallax."
+      ]
+    },
+    "marquee": {
+      "description": "Slow editorial marquee acting as a section divider.",
+      "content": "DIREITO DE FAMÍLIA • INVENTÁRIO • PLANEJAMENTO SUCESSÓRIO • PREVIDENCIÁRIO • DIREITO DE FAMÍLIA • INVENTÁRIO •",
+      "style": "bg-navy text-cream py-6 text-2xl font-heading tracking-widest overflow-hidden whitespace-nowrap"
+    },
+    "manifesto": {
+      "description": "Numbered manifesto chapters detailing history and differentiators.",
+      "elements": [
+        "01. História",
+        "02. Quem Somos",
+        "03. Diferenciais"
+      ],
+      "style": "Grid layout where numbers are massive and serif, text is refined sans."
+    },
+    "services": {
+      "description": "3 Elegant cards for main practice areas.",
+      "cards": [
+        {
+          "title": "Divórcio & Família",
+          "description": "Atuação humanizada em divórcios, guarda, pensão e partilha de bens.",
+          "button": "Agendar Consulta"
+        },
+        {
+          "title": "Inventário & Sucessões",
+          "description": "Planejamento sucessório, testamentos e inventários ágeis.",
+          "button": "Agendar Consulta"
+        },
+        {
+          "title": "Previdenciário",
+          "description": "Aposentadorias e benefícios com segurança e eficiência.",
+          "button": "Agendar Consulta"
+        }
+      ],
+      "style": "Cards with background_cream or surface_white, rounded-3xl, image on top, padding p-8."
+    },
+    "gallery": {
+      "description": "Editorial clipped frames showing office and conceptual imagery. Asymmetric bento grid.",
+      "style": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+    },
+    "location_and_hours": {
+      "description": "Grid layout splitting Business Hours text and Embedded Google Maps iframe (Lorena-SP)."
+    },
+    "contact": {
+      "description": "Direct contact options.",
+      "elements": [
+        "Phone",
+        "WhatsApp: (12) 98265-4821",
+        "Instagram",
+        "Address",
+        "Button: Como chegar"
+      ]
+    },
+    "testimonials": {
+      "description": "Google Reviews showcased in an elegant masonry or sliding carousel layout."
+    },
+    "faq": {
+      "description": "Clean accordion style, 1px bottom borders, elegant open/close animation."
+    },
+    "footer": {
+      "description": "Massive typography for branding, subtle social links, completely dark (Navy) with Cream text."
+    }
+  },
+  "image_urls": {
+    "hero_lawyer": {
+      "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxmZW1hbGUlMjBsYXd5ZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODQxNjUyNDl8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Professional female lawyer portrait for the hero section."
+    },
+    "hero_lawyer_alt": {
+      "url": "https://images.unsplash.com/photo-1733348137479-2e726d326d9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjBsYXd5ZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODQxNjUyNDl8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Alternative female lawyer standing with arms crossed."
+    },
+    "service_family": {
+      "url": "https://images.unsplash.com/photo-1559234938-b60fff04894d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGVsZGVybHklMjBjb3VwbGUlMjB3YWxraW5nfGVufDB8fHx8MTc4NDE2NTI1OHww&ixlib=rb-4.1.0&q=85",
+      "description": "Conceptual image for Family Law / Divórcio & Família (can double for Previdenciário)."
+    },
+    "service_succession": {
+      "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwyfHxmb3VudGFpbiUyMHBlbiUyMHNpZ25pbmclMjBkb2N1bWVudHxlbnwwfHx8fDE3ODQxNjUyNTh8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Fountain pen on document for Inventário & Sucessões."
+    },
+    "service_previdenciario": {
+      "url": "https://images.unsplash.com/photo-1647913097114-5975d965a1ff?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwyfHxoYXBweSUyMGVsZGVybHklMjBjb3VwbGUlMjB3YWxraW5nfGVufDB8fHx8MTc4NDE2NTI1OHww&ixlib=rb-4.1.0&q=85",
+      "description": "Elderly couple walking for Previdenciário."
+    },
+    "gallery_office": {
+      "url": "https://images.pexels.com/photos/8082233/pexels-photo-8082233.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Luxury modern law office interior for gallery."
+    },
+    "gallery_justice": {
+      "url": "https://images.unsplash.com/photo-1687289133469-b2a07a13b78b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwxfHxzY2FsZXMlMjBvZiUyMGp1c3RpY2UlMjBnb2xkfGVufDB8fHx8MTc4NDE2NTI0OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Gold scales of justice for gallery."
+    },
+    "gallery_travel": {
+      "url": "https://images.unsplash.com/photo-1603378995290-8d4ce0495ddd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHwzfHxwYXJpcyUyMGFyY2hpdGVjdHVyZSUyMGNsYXNzaWN8ZW58MHx8fHwxNzg0MTY1MjU3fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Classic Parisian architecture for travel/editorial imagery in gallery."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Use Framer Motion to animate the hero section with a signature on-load masked line-by-line reveal.",
+    "Implement Lenis for smooth scrolling across the entire page.",
+    "Ensure 'Cormorant Garamond' is applied to all Headings (H1-H6) and 'Manrope' to all body text. Add them to Tailwind config.",
+    "Use lucide-react for icons.",
+    "Strictly follow the color palette: Deep Navy (#0C2D4E), Warm Gold (#B8860B), Brass (#D4B78D), and Cream (#F5F1E8) for background.",
+    "Ensure sections have generous padding (py-24 or py-32) to let the design breathe.",
+    "Never center-align large blocks of text; left-align for elegance. Center alignment is only permitted for short section titles or CTAs.",
+    "Ensure the hero image uses a parallax effect.",
+    "The gallery should be an asymmetrical bento grid with images treated as editorial clipped frames (rounded corners, subtle zoom on hover).",
+    "All interactive elements MUST include a `data-testid` attribute (e.g., `data-testid=\"hero-whatsapp-button\"`).",
+    "DO NOT use a fully transparent background for the header. Always use the specified glassmorphism style (`backdrop-blur-xl bg-[#F5F1E8]/80`)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "You MUST NOT apply universal transition (e.g., `transition: all`). Always add transitions for specific properties.",
+    "You MUST NOT center align the app container, i.e., do not add `.App { text-align: center; }` in the CSS file.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects."
+  ]
+}
